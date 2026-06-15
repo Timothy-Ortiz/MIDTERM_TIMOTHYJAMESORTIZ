@@ -1,0 +1,399 @@
+{
+	"info": {
+		"_postman_id": "dec575e0-289b-45b3-ab90-81a85bb79272",
+		"name": "webex_collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "53962447",
+		"_collection_link": "https://timothyjamesbortiz-5605053.postman.co/workspace/Timothy-James-Ortiz's-Workspace~ba23ef4b-46b0-4464-812d-fe59d25888b2/collection/53962447-dec575e0-289b-45b3-ab90-81a85bb79272?action=share&source=collection_link&creator=53962447"
+	},
+	"item": [
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Authentication",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "MGU0NTBjMTAtMDkzMC00MDI0LTljZDAtYWI0NTQ2M2ExZWVjZDIzNWYxZWEtNzI3_PS65_8ff5927a-d061-410c-b007-22c452dfde0c",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "MGU0NTBjMTAtMDkzMC00MDI0LTljZDAtYWI0NTQ2M2ExZWVjZDIzNWYxZWEtNzI3_PS65_8ff5927a-d061-410c-b007-22c452dfde0c",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://webexapis.com/v1/people/me",
+					"protocol": "https",
+					"host": [
+						"webexapis",
+						"com"
+					],
+					"path": [
+						"v1",
+						"people",
+						"me"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Room",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "MGU0NTBjMTAtMDkzMC00MDI0LTljZDAtYWI0NTQ2M2ExZWVjZDIzNWYxZWEtNzI3_PS65_8ff5927a-d061-410c-b007-22c452dfde0c",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "MGU0NTBjMTAtMDkzMC00MDI0LTljZDAtYWI0NTQ2M2ExZWVjZDIzNWYxZWEtNzI3_PS65_8ff5927a-d061-410c-b007-22c452dfde0c",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"Midterm Webex Room\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://webexapis.com/v1/rooms",
+					"protocol": "https",
+					"host": [
+						"webexapis",
+						"com"
+					],
+					"path": [
+						"v1",
+						"rooms"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Send Message",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "MGU0NTBjMTAtMDkzMC00MDI0LTljZDAtYWI0NTQ2M2ExZWVjZDIzNWYxZWEtNzI3_PS65_8ff5927a-d061-410c-b007-22c452dfde0c",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "MGU0NTBjMTAtMDkzMC00MDI0LTljZDAtYWI0NTQ2M2ExZWVjZDIzNWYxZWEtNzI3_PS65_8ff5927a-d061-410c-b007-22c452dfde0c",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"roomId\":\"Y2lzY29zcGFyazovL3VybjpURUFNOnVzLXdlc3QtMl9yL1JPT00vMGIzZjkyYzAtNjg4OS0xMWYxLTkxYWUtYjk1ZjBhMjFhODI0\",\n  \"text\":\"Hello from Timothy James B. Ortiz\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://webexapis.com/v1/messages",
+					"protocol": "https",
+					"host": [
+						"webexapis",
+						"com"
+					],
+					"path": [
+						"v1",
+						"messages"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Edit Message",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "MGU0NTBjMTAtMDkzMC00MDI0LTljZDAtYWI0NTQ2M2ExZWVjZDIzNWYxZWEtNzI3_PS65_8ff5927a-d061-410c-b007-22c452dfde0c",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "MGU0NTBjMTAtMDkzMC00MDI0LTljZDAtYWI0NTQ2M2ExZWVjZDIzNWYxZWEtNzI3_PS65_8ff5927a-d061-410c-b007-22c452dfde0c",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"roomId\":\"Y2lzY29zcGFyazovL3VybjpURUFNOnVzLXdlc3QtMl9yL1JPT00vMGIzZjkyYzAtNjg4OS0xMWYxLTkxYWUtYjk1ZjBhMjFhODI0\",\n  \"text\":\"Edited message from Postman Timothy James B. Ortiz\"\n}"
+				},
+				"url": {
+					"raw": "https://webexapis.com/v1/messages/Y2lzY29zcGFyazovL3VybjpURUFNOnVzLXdlc3QtMl9yL01FU1NBR0UvMzE4NTY0ZjAtNjg4OS0xMWYxLWE2MTQtYjNhODEyMjNiZmI1",
+					"protocol": "https",
+					"host": [
+						"webexapis",
+						"com"
+					],
+					"path": [
+						"v1",
+						"messages",
+						"Y2lzY29zcGFyazovL3VybjpURUFNOnVzLXdlc3QtMl9yL01FU1NBR0UvMzE4NTY0ZjAtNjg4OS0xMWYxLWE2MTQtYjNhODEyMjNiZmI1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Member",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "MGU0NTBjMTAtMDkzMC00MDI0LTljZDAtYWI0NTQ2M2ExZWVjZDIzNWYxZWEtNzI3_PS65_8ff5927a-d061-410c-b007-22c452dfde0c",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "MGU0NTBjMTAtMDkzMC00MDI0LTljZDAtYWI0NTQ2M2ExZWVjZDIzNWYxZWEtNzI3_PS65_8ff5927a-d061-410c-b007-22c452dfde0c",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"roomId\":\"Y2lzY29zcGFyazovL3VybjpURUFNOnVzLXdlc3QtMl9yL1JPT00vMGIzZjkyYzAtNjg4OS0xMWYxLTkxYWUtYjk1ZjBhMjFhODI0\",\n  \"personEmail\": \"marclesternayre@gmail.com\"\n}"
+				},
+				"url": {
+					"raw": "https://webexapis.com/v1/memberships",
+					"protocol": "https",
+					"host": [
+						"webexapis",
+						"com"
+					],
+					"path": [
+						"v1",
+						"memberships"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Retrieve Room Information",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "MGU0NTBjMTAtMDkzMC00MDI0LTljZDAtYWI0NTQ2M2ExZWVjZDIzNWYxZWEtNzI3_PS65_8ff5927a-d061-410c-b007-22c452dfde0c",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "MGU0NTBjMTAtMDkzMC00MDI0LTljZDAtYWI0NTQ2M2ExZWVjZDIzNWYxZWEtNzI3_PS65_8ff5927a-d061-410c-b007-22c452dfde0c",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://webexapis.com/v1/rooms/Y2lzY29zcGFyazovL3VybjpURUFNOnVzLXdlc3QtMl9yL1JPT00vMGIzZjkyYzAtNjg4OS0xMWYxLTkxYWUtYjk1ZjBhMjFhODI0",
+					"protocol": "https",
+					"host": [
+						"webexapis",
+						"com"
+					],
+					"path": [
+						"v1",
+						"rooms",
+						"Y2lzY29zcGFyazovL3VybjpURUFNOnVzLXdlc3QtMl9yL1JPT00vMGIzZjkyYzAtNjg4OS0xMWYxLTkxYWUtYjk1ZjBhMjFhODI0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Meetings",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "MGU0NTBjMTAtMDkzMC00MDI0LTljZDAtYWI0NTQ2M2ExZWVjZDIzNWYxZWEtNzI3_PS65_8ff5927a-d061-410c-b007-22c452dfde0c",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "MGU0NTBjMTAtMDkzMC00MDI0LTljZDAtYWI0NTQ2M2ExZWVjZDIzNWYxZWEtNzI3_PS65_8ff5927a-d061-410c-b007-22c452dfde0c",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"title\": \"DevOps Webex Midterm Meeting\",\n  \"start\": \"2026-06-20T14:00:00Z\",\n  \"end\": \"2026-06-20T15:00:00Z\",\n  \"enabledAutoRecordMeeting\": false,\n  \"allowAnyUserToBeCoHost\": true\n}"
+				},
+				"url": {
+					"raw": "https://webexapis.com/v1/meetings",
+					"protocol": "https",
+					"host": [
+						"webexapis",
+						"com"
+					],
+					"path": [
+						"v1",
+						"meetings"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List Meetings",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "MGU0NTBjMTAtMDkzMC00MDI0LTljZDAtYWI0NTQ2M2ExZWVjZDIzNWYxZWEtNzI3_PS65_8ff5927a-d061-410c-b007-22c452dfde0c",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "MGU0NTBjMTAtMDkzMC00MDI0LTljZDAtYWI0NTQ2M2ExZWVjZDIzNWYxZWEtNzI3_PS65_8ff5927a-d061-410c-b007-22c452dfde0c",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://webexapis.com/v1/meetings",
+					"protocol": "https",
+					"host": [
+						"webexapis",
+						"com"
+					],
+					"path": [
+						"v1",
+						"meetings"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "auth_secret_0l9t"
+		}
+	]
+}
